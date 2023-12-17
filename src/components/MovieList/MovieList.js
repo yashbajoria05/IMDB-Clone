@@ -22,12 +22,16 @@ const MovieList = () => {
   }, [type]);
 
   return (
-    <div className="movie_list">
-      <h2 className="list_title">{(type ? type : "POPULAR").toUpperCase()}</h2>
-      <div className="list_cards">
-        {movieList.map((movie) => (
-          <Card movie={movie} />
-        ))}
+    <div className="container">
+      <div className="movie_list">
+        <h2 className="list_title">
+          {(type ? type : "POPULAR").toUpperCase()}
+        </h2>
+        <div className="list_cards">
+          {movieList.map((movie) => (
+            <Card movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
   );

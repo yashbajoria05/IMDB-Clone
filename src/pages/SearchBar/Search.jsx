@@ -19,23 +19,25 @@ const Search = () => {
   }, [search]);
 
   return (
-    <div className="search_bar">
-      <form className="input_box">
-        <label for="searchBox" className="box">
-          Search Your Favorite Movie
-        </label>
-        <input
-          id="searchBox"
-          type="text"
-          placeholder="Search Here"
-          onChange={(e) => setSearch(e.target.value)}
-          value={search}
-        />
-      </form>
-      <div className="list_cards">
-        {movies.map((movie) => (
-          <Card movie={movie} />
-        ))}
+    <div className="container">
+      <div className="search_bar">
+        <form className="input_box">
+          <label for="searchBox" className="box">
+            Search Your Favorite Movie
+          </label>
+          <input
+            id="searchBox"
+            type="text"
+            placeholder="Search Here"
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
+          />
+        </form>
+        <div className="list_cards">
+          {movies.map((movie) => (
+            <Card movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
   );

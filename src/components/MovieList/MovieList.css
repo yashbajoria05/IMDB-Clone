@@ -1,0 +1,23 @@
+.container {
+  /* border: 2px solid #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie_list {
+  /* border: 2px solid #fff; */
+  width: 90%;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.movie_list h2 {
+  margin-left: 2rem;
+}
+.list_cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
