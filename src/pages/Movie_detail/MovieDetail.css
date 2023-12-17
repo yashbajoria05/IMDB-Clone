@@ -1,0 +1,346 @@
+.movie {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie_gradient {
+  position: absolute;
+  height: 600px;
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+.movie__intro {
+  height: 500px;
+  width: 100%;
+}
+
+.movie__backdrop {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.movie__detail {
+  /* border: 2px solid #fff; */
+  position: relative;
+  height: auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  bottom: 220px;
+}
+
+.movie__detailLeft {
+  margin-right: 35px;
+}
+
+.movie__poster {
+  /* border-radius: 10px; */
+  width: 320px;
+  box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
+}
+
+.movie__detailRight {
+  /* border: 2px solid white; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: white;
+  height: 450px;
+}
+
+.movie__detailRightTop {
+  position: relative;
+  bottom: 25px;
+}
+.movie__detailRightTop > div {
+  margin-bottom: 0.5rem;
+}
+
+.movie__name {
+  text-shadow: 0px 0px 8px #000000;
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+
+.movie__voteCount {
+  text-shadow: 0px 0px 8px #000000;
+  margin-left: 1.2rem;
+}
+
+.movie__genres {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.1rem 0;
+}
+
+.movie__genre {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #000000;
+  background-color: #f3ce13;
+  border-radius: 20px;
+  margin-right: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.movie__detailRightBottom {
+  /* border: 2px solid white; */
+  margin: 0.5rem 0 0 0;
+  flex: 0.8;
+}
+
+.synopsisText {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.synopsisText > div:last-of-type {
+  margin-left: auto;
+}
+
+.movie__links {
+  /* border: 2px solid #fff; */
+  position: relative;
+  bottom: 75px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 75%;
+  /* border: 2px solid #fff; */
+}
+
+.movie__heading {
+  font-size: 2.2rem;
+}
+.movie__heading1 {
+  margin-top: 3.5rem;
+  font-size: 2.2rem;
+}
+.movie__Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 150px;
+  color: black;
+  font-weight: bold;
+}
+
+.movie__homeButton {
+  background-color: rgb(255, 0, 0);
+}
+
+.movie__imdbButton {
+  background-color: #f3ce13;
+}
+
+.newTab {
+  margin-left: 1.4rem;
+}
+.movie__production {
+  /* border: 2px solid #fff; */
+  overflow: scroll;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+  margin-top: 3rem;
+}
+
+.movie__production::-webkit-scrollbar {
+  display: none;
+}
+.productionCompanyBg {
+  background-color: #fff;
+  color: #000000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+  width: 270px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 7px solid #666;
+}
+.productionCompanyImage {
+  /* background-color: #7b7b7b50; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.productionCompanyTitle {
+  font-size: 1rem;
+}
+
+.movie__productionComapany {
+  max-height: 190px;
+  max-width: 190px;
+  margin: 1.5rem;
+}
+
+@media only screen and (max-width: 868px) {
+  .movie__backdrop {
+    height: 450px;
+    object-position: center;
+  }
+  .movie_gradient {
+    height: 500px;
+  }
+  .movie__detail {
+    height: 650px;
+    width: 85%;
+    bottom: 210px;
+  }
+  .movie__detailRightTop {
+    bottom: -25px;
+  }
+  .movie__poster {
+    width: 250px;
+  }
+  .movie__name {
+    font-size: 2.7rem;
+  }
+  .movie__genres {
+    margin: 1.2rem 0;
+  }
+  .movie__detailRightBottom {
+    margin: 3.5rem 0 0 0;
+  }
+  .synopsisText {
+    font-size: 1.7rem;
+    margin-bottom: 0.9rem;
+  }
+  .movie__links {
+    bottom: 70px;
+    width: 90%;
+  }
+  .movie__heading {
+    font-size: 1.8rem;
+  }
+  .movie__heading1 {
+    font-size: 1.8rem;
+  }
+  .movie__Button {
+    padding: 0.7rem 1rem;
+  }
+  .productionCompanyBg {
+    height: 220px;
+    width: 220px;
+    margin-right: 0px;
+    margin-top: 15px;
+  }
+  .movie__productionComapany {
+    max-height: 150px;
+    max-width: 150px;
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .movie__backdrop {
+    height: 350px;
+  }
+  .movie_gradient {
+    height: 350px;
+  }
+  .movie__detail {
+    /* border: 1px solid #fff; */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 240px;
+  }
+  .movie__poster {
+    width: 200px;
+  }
+  .movie__detailLeft {
+    margin-right: 0px;
+  }
+  .movie__detailRight {
+    padding: 0 10px;
+    height: 400px;
+  }
+  .movie__detailRightTop {
+    bottom: -10px;
+  }
+  .movie__name {
+    font-size: 1.9rem;
+  }
+  .movie__genres {
+    margin: 0.8rem 0;
+  }
+  .movie__detailRightBottom {
+    margin: 0;
+  }
+  .movie__genre {
+    padding: 0.3rem 0.8rem;
+    font-size: 13px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .movie__detailRightBottom {
+    margin: 3.5rem 0 0 0;
+  }
+  .synopsisText {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  .movie__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 50px;
+    height: auto;
+    width: 90%;
+  }
+  .movie__heading {
+    font-size: 1.5rem;
+  }
+  .movie__Button {
+    padding: 0.6rem 0.8rem;
+  }
+  .synopsisDescrip {
+    font-size: 1rem;
+  }
+  .movie__production {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+  }
+  .productionCompanyBg {
+    height: 200px;
+    width: 200px;
+  }
+  .movie__productionComapany {
+    max-height: 135px;
+    max-width: 135px;
+    margin: 5px;
+  }
+}
