@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { img_url } from "../../requests";
 import { Link } from "react-router-dom";
 import "./Card.css";
 
@@ -16,17 +18,15 @@ const Card = ({ movie }) => {
     <>
       {isLoading ? (
         <div className="cards">
-          <SkeletonTheme color="#202020" highlightColor="#444">
-            <Skeleton height={350} duration={3} />
+          <SkeletonTheme baseColor="#202020" highlightColor="#444">
+            <Skeleton height={320} duration={2} />
           </SkeletonTheme>
         </div>
       ) : (
-        <Link to={`/IMDB_clone/movie/${movie.id}`} className="link">
+        <Link to={`/movie/${movie.id}`} className="link">
           <div className="cards">
             <img
-              src={`https://image.tmdb.org/t/p/original/${
-                movie && movie.poster_path
-              }`}
+              src={`${img_url}${movie && movie.poster_path}`}
               className="cards_img"
               alt={movie.original_title}
             />

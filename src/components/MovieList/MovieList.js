@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { key, base_url } from "../../requests.js";
 import Card from "../Card/Card.jsx";
 import "./MovieList.css";
 
@@ -10,9 +11,9 @@ const MovieList = () => {
   useEffect(() => {
     const getData = async () => {
       const data = await fetch(
-        `https://api.themoviedb.org/3/movie/${
+        `${base_url}movie/${
           type ? type : "popular"
-        }?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+        }?api_key=${key}&language=en-US`
       );
       const actualdata = await data.json();
       setMovieList(actualdata.results);

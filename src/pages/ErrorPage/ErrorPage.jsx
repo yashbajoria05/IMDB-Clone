@@ -9,7 +9,7 @@ const ErrorPage = () => {
         <div>404</div>
         <p className="notFound">Page Not Found</p>
         <p className="notExist">The page you're looking for doesn't exist</p>
-        <Link to="/IMDB_clone" className="Homelink">
+        <Link to="/" className="Homelink">
           Go Back Home
         </Link>
       </div>

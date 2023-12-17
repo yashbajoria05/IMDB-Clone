@@ -25,12 +25,14 @@ const Home = () => {
         <Carousel
           showThumbs={false}
           autoPlay={true}
+          interval={3000}
+          autoFocus={true}
           transitionTime={3}
           infiniteLoop={true}
           showStatus={false}
         >
           {popular.map((movie) => (
-            <Link to={`/IMDB_clone/movie/${movie.id}`} className="link">
+            <Link to={`/movie/${movie.id}`} className="link">
               <div className="posterImage">
                 <img
                   src={`https://image.tmdb.org/t/p/original/${
