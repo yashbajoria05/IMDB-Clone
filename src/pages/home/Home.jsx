@@ -30,7 +30,7 @@ const Home = () => {
           showStatus={false}
         >
           {popular.map((movie) => (
-            <Link to={`/movie/${movie.id}`} className="link">
+            <Link to={`/IMDB_clone/movie/${movie.id}`} className="link">
               <div className="posterImage">
                 <img
                   src={`https://image.tmdb.org/t/p/original/${
